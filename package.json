@@ -1,0 +1,15 @@
+{
+  "name": "Comm",
+  "version": "0.0.1",
+  "description": "Connect to raspberry pi && power remote control car.",
+  "author": "Victor Venters <victor@hugesuccess.co>",
+  "scripts": {
+    "start": ". ~/.nvm/nvm.sh && nvm use 0.10.36 && node app.js"  
+  },
+  "dependencies": {
+    "socket.io": "1.4.28"
+  },
+  "devDependencies": {
+    "xbox-controller": "^0.7.0"
+  }
+}
