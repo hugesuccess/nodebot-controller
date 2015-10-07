@@ -3,14 +3,17 @@
 //to match the verson of node being run
 //on the raspberry pi
 
-var socket = require('socket.io-client')('http://10.0.1.5:8080');
-var XboxController = require('xbox-controller');
-var xbox = new XboxController;
+var carurl          = "http://10.0.1.5:8080",
+    socket          = require('socket.io-client')(carurl),
+    XboxController  = require('xbox-controller');
+    xbox            = new XboxController;
 
 /*
  * Must wait for server to connect
  * Could move event handlers to separate class
  * Should implement the rest of the controller (IDK why tho)
+ * Once connected will send input directly to the pi - which
+ * will send data to the arduino which will power the motor
  * 
  */
  socket.on("connect", function() {
